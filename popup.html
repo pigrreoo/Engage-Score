@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { width: 300px; padding: 15px; font-family: sans-serif; text-align: center; }
+        .hidden { display: none; }
+        input { width: 90%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; padding: 10px; margin-top: 5px; color: white; border: none; cursor: pointer; border-radius: 4px; font-weight: bold;}
+        .btn-aluno { background-color: #0b9c36; }
+        .btn-prof { background-color: #4285f4; }
+        .btn-reset { background-color: #999; margin-top: 15px; font-size: 12px; padding: 5px; }
+        h3 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h3>Configuração de Aula</h3>
+    
+    <div id="telaEscolha">
+        <p>Quem é você nesta aula?</p>
+        <button id="escolhaAluno" class="btn-aluno">Sou Aluno</button>
+        <button id="escolhaProf" class="btn-prof">Sou Professor</button>
+    </div>
+
+    <div id="telaAluno" class="hidden">
+        <h4>Identificação do Aluno</h4>
+        <input type="text" id="nomeAluno" placeholder="Seu Nome Completo">
+        <button id="salvarAluno" class="btn-aluno">Salvar e Entrar</button>
+        
+        <button id="resetAluno" class="btn-reset">Trocar Perfil</button>
+    </div>
+
+    <div id="telaProf" class="hidden">
+        <h4>Modo Professor Ativo</h4>
+        <p style="font-size: 12px; color: gray;">O painel de tempo ficará oculto para você.</p>
+        <button id="salvarProf" class="btn-prof">Confirmar</button>
+
+        <button id="resetProf" class="btn-reset">Trocar Perfil</button>
+    </div>
+
+    <p id="status" style="color: green; font-size: 12px; margin-top: 10px;"></p>
+    <script src="popup.js"></script>
+</body>
+</html>
